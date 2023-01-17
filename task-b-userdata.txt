@@ -1,0 +1,11 @@
+#!/bin/bash
+# Install Apache Web Server
+yum install -y httpd
+
+# Turn on web server
+systemctl enable httpd.service
+systemctl start  httpd.service
+
+# Download App files
+wget https://github.com/tuantng425/s3836455-a2-cloud-operations/raw/main/task-b-website.zip
+unzip task-b-website.zip -d /var/www/html/
